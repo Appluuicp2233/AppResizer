@@ -180,4 +180,4 @@ If the configuration does not take effect, filter `AppResizer` in the Xposed log
 
 ## 9. License
 
-This project is open sourced under the **MIT License**. See [LICENSE](LICENSE). The change history is in [CHANGELOG.md](CHANGELOG.md).
+This project is open sourced under the **MIT License**. See [LICENSE](LICENSE). 
