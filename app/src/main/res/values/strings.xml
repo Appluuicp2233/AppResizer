@@ -1,0 +1,168 @@
+<resources>
+    <string name="app_name">屏幕密度调节器</string>
+    <string name="app_version">2.0.5</string>
+    <string name="app_owner">AllToolBox</string>
+    <string name="app_author">Appluuicp2233</string>
+    <string name="app_update_date">2026 年 11 月 9 日</string>
+    <string name="app_copyright">AllToolBox 开源项目 (MIT License)</string>
+
+    <string name="agree">同意</string>
+    <string name="reject">拒绝</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="reset">重置</string>
+    <string name="retry">重新检查</string>
+    <string name="close">关闭</string>
+    <string name="open">打开</string>
+    <string name="search">搜索</string>
+    <string name="more">更多</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+
+    <string name="agreement_body">欢迎使用屏幕密度调节器。在开始使用之前，请仔细阅读以下条款。\n\n一、开源许可\n本应用是自由开源软件，遵循 MIT 许可证发布。您可以自由地使用、复制、修改、合并、发布、分发、再许可本软件的副本，前提是在所有副本中包含原始版权声明与本许可声明。本软件按"现状"提供，不提供任何明示或暗示的担保。\n\n二、功能说明\n本应用用于在系统层面为单个应用独立配置显示密度（DPI）与分辨率，配置通过 Xposed / EdXposed / LSPosed 框架注入机制生效，仅作用于您选中的目标应用，不影响系统整体显示，也不修改系统全局密度。\n\n三、使用条件\n1. 您需要在 Xposed / EdXposed / LSPosed 框架中勾选启用本模块，并重启设备后模块方可生效。\n2. 部分功能（如调整配置文件权限、终止目标应用进程、以 root 接口获取完整应用列表）需要 root 权限。\n3. 请勿将本应用用于任何违反法律法规或侵害他人权益的用途。因使用本应用造成的一切后果由使用者自行承担。\n\n四、隐私承诺\n本应用不申请任何联网权限，不会收集、上传或分享您的个人信息。所有配置仅保存在您本机设备的 SharedPreferences 中，卸载本应用后配置一并清除。\n\n五、反馈与支持\n如遇到问题，可通过「关于」页中的联系方式与开发者联系。\n\n所属：AllToolBox\n许可：MIT License\n更新日期：2026 年 11 月 9 日</string>
+
+    <string name="title_wizard">向导</string>
+    <string name="title_settings">设置</string>
+    <string name="title_about">关于</string>
+    <string name="title_contact">联系</string>
+    <string name="agreement_title">用户协议</string>
+
+    <string name="wizard_tab_welcome">欢迎</string>
+    <string name="wizard_tab_permission">权限</string>
+    <string name="wizard_tab_security">安全</string>
+    <string name="wizard_tab_usage">使用</string>
+
+    <string name="wizard_welcome_title">欢迎使用屏幕密度调节器</string>
+    <string name="wizard_welcome_body">本应用是一款面向高级用户的系统级显示调节工具，运行于 Xposed / EdXposed / LSPosed 框架之上。它允许您为设备上的任意应用单独设置显示密度（DPI）与分辨率，而无需修改系统全局参数。\n\n与系统自带的显示缩放不同，本应用的配置是按应用独立生效的：您可以让某个应用保持高密度、另一个应用保持低密度，互不干扰。配置通过系统注入机制在目标应用启动时生效，对系统本身透明。\n\n请依次阅读后续三个页签，了解运行所需的权限、安全注意事项以及完整使用流程。</string>
+    <string name="wizard_welcome_note">本应用需在 Xposed / EdXposed / LSPosed 框架中启用，并授予 root 权限后才能生效。请确保运行环境满足要求。</string>
+
+    <string name="wizard_permission_title">权限说明</string>
+    <string name="wizard_permission_body">运行本应用需要满足以下前置条件：\n\n1. Xposed / EdXposed / LSPosed 框架：必须已安装并在框架中勾选启用本模块。模块勾选后需要重启设备才能生效。\n2. root 权限：用于将本应用的配置文件（SharedPreferences）调整为全局可读，以便注入模块在目标应用进程中读取配置；同时用于在保存配置后终止目标应用进程使设置立即生效。\n3. 查询已安装应用：用于在主界面列出设备上的应用，供您选择需要配置的目标应用。\n\n所有权限仅在本机范围内使用，本应用不申请任何联网权限。</string>
+    <string name="wizard_permission_note">若任一前置条件不满足，本应用将无法正常工作。请在框架中启用本模块并重启设备后再试。</string>
+
+    <string name="wizard_security_title">安全说明</string>
+    <string name="wizard_security_body">1. 本应用不申请任何联网权限，不会上传、收集或分享任何数据。\n2. 本应用不常驻后台服务，仅在您主动打开时工作；您退出主界面后，本应用的界面进程即停止。\n3. 所有配置均保存于本机 SharedPreferences；卸载本应用后配置一并清除，不残留系统痕迹。\n4. root 权限仅在您主动执行"保存配置并生效"时调用，用于 chmod 配置文件与 kill 目标应用进程，不会在后台静默获取。\n5. 当检测到运行环境异常（模块未激活、无 root 等）时，本应用不会执行任何修改系统的操作，仅提示环境异常。\n6. 本应用为开源项目（MIT License），您可以审查源码确认其行为。</string>
+    <string name="wizard_security_note">修改前请记录目标应用原有的显示密度，以便随时恢复。</string>
+
+    <string name="wizard_usage_title">使用方法</string>
+    <string name="wizard_usage_body">完整使用流程如下：\n\n1. 首次启动时，选择注入方式（默认"配置注入"即可），并选择应用列表获取模式（"系统接口"或"root 接口"）。\n2. 主界面会列出设备上的应用，点击任意应用进入其详情页。\n3. 在详情页中设置该应用的 DPI 数值与分辨率（宽 × 高），也可以单独覆盖该应用的注入方式。\n4. 点击右上角"保存"，本应用会终止目标应用进程；下次打开该应用时新配置即生效。\n5. 如果某种注入方式对某个应用不生效，可以在该应用详情页切换为其他方式（指标注入、资源管理、界面注入或五种同时尝试）。\n6. 通过右上角菜单可以打开/关闭系统应用的显示，也可以通过抽屉进入设置或关于页。</string>
+    <string name="wizard_usage_note">单个应用的注入方式可在其详情页单独切换；若配置不生效，请尝试其他模式。</string>
+    <string name="wizard_enter">进入</string>
+
+    <string name="checking_env">正在检查运行环境</string>
+    <string name="starting_service">正在启动系统服务</string>
+    <string name="service_started">系统服务已启动</string>
+    <string name="loading_apps">正在加载应用列表</string>
+    <string name="saving">正在保存</string>
+    <string name="saving_apply">正在保存并生效</string>
+    <string name="resetting">正在恢复默认配置</string>
+
+    <string name="env_banner">模块未激活，点击关闭</string>
+    <string name="env_error_body">本应用可能无法正常工作。\n\n当前未检测到可用的运行环境，或者本模块尚未在框架中被勾选启用。</string>
+    <string name="env_error_root">未检测到 root 权限</string>
+    <string name="env_error_xposed">未检测到 Xposed 框架</string>
+    <string name="env_error_inactive">模块未在框架中启用</string>
+    <string name="env_solution">解决方案：请打开框架管理应用，在模块列表中勾选本应用，然后重启设备。</string>
+
+    <string name="select_mode_title">选择注入方式</string>
+    <string name="select_mode_body">默认使用配置注入。如果对某个应用不生效，请尝试切换其他模式。</string>
+    <string name="mode_config">配置注入</string>
+    <string name="mode_metrics">指标注入</string>
+    <string name="mode_resources">资源管理</string>
+    <string name="mode_ui">界面注入</string>
+    <string name="mode_combined">五种同时尝试</string>
+
+    <string name="select_list_mode_title">应用列表获取模式</string>
+    <string name="list_mode_system">系统接口</string>
+    <string name="list_mode_system_desc">通过系统 PackageManager 获取应用列表（默认）</string>
+    <string name="list_mode_root">root 接口</string>
+    <string name="list_mode_root_desc">通过 root 命令获取全部应用（含隐藏/保护应用）</string>
+
+    <string name="nav_wizard">向导</string>
+    <string name="nav_exit">退出</string>
+    <string name="nav_open">打开导航</string>
+    <string name="nav_close">关闭导航</string>
+
+    <string name="show_system_apps">显示系统应用</string>
+    <string name="show_system_apps_desc">在列表中同时显示系统内置应用</string>
+    <string name="list_mode">应用列表获取模式</string>
+    <string name="list_mode_desc">选择获取应用列表的方式</string>
+
+    <string name="language">语言</string>
+    <string name="language_desc">选择应用界面显示的语言</string>
+    <string name="language_system">跟随系统</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_en">English</string>
+    <string name="language_ja">日本語</string>
+
+    <string name="unconfigured">未配置</string>
+    <string name="configured">已配置</string>
+
+    <string name="search_hint">搜索应用名称或包名</string>
+    <string name="search_empty">没有找到匹配的应用</string>
+
+    <string name="dpi_title">DPI 调节</string>
+    <string name="dpi_desc">调节该应用的显示密度</string>
+    <string name="dpi_dialog_title">DPI 调节</string>
+    <string name="dpi_input_hint">请输入 DPI 数值</string>
+    <string name="size_title">分辨率设置</string>
+    <string name="size_desc">单独设置该应用的显示分辨率</string>
+    <string name="size_dialog_title">分辨率设置</string>
+    <string name="width_hint">宽</string>
+    <string name="height_hint">高</string>
+
+    <string name="default_dpi_reference">默认 DPI 参考值</string>
+    <string name="default_dpi_reference_desc">新应用首次打开时填入的参考值</string>
+    <string name="default_width_reference">默认分辨率宽度参考值</string>
+    <string name="default_width_reference_desc">新应用首次打开时填入的参考宽度</string>
+    <string name="default_height_reference">默认分辨率高度参考值</string>
+    <string name="default_height_reference_desc">新应用首次打开时填入的参考高度</string>
+    <string name="dpi_method">DPI 修改方式</string>
+    <string name="dpi_method_desc">选择向目标应用注入密度的方式</string>
+    <string name="kill_method">终止进程方式</string>
+    <string name="kill_method_desc">应用配置后如何结束目标应用进程</string>
+    <string name="kill_force">强制终止</string>
+    <string name="kill_am">普通终止</string>
+    <string name="kill_none">不终止</string>
+
+    <string name="reset_confirm_title">恢复默认</string>
+    <string name="reset_confirm_body">是否需要重置输入为参考值，并清除该应用已保存的 DPI 与分辨率？</string>
+    <string name="save_confirm_title">保存设置</string>
+    <string name="save_confirm_body">是否保存该应用的 DPI 与分辨率设置？保存后将重启目标应用使其生效。</string>
+    <string name="reset_done">已恢复默认配置</string>
+    <string name="save_done">保存成功</string>
+    <string name="save_failed">保存失败，请检查 root 权限</string>
+    <string name="kill_done">已终止目标应用进程</string>
+    <string name="invalid_dpi">请输入 72 到 960 之间的 DPI 数值</string>
+    <string name="invalid_range">请输入有效的数值</string>
+    <string name="invalid_size">请输入有效的宽高数值</string>
+
+    <string name="about_version">版本</string>
+    <string name="about_author">作者</string>
+    <string name="about_framework">运行框架</string>
+    <string name="about_android">Android 版本</string>
+    <string name="about_owner">所属</string>
+    <string name="about_update">更新日期</string>
+    <string name="about_license">开源协议</string>
+    <string name="about_github">GitHub 仓库</string>
+    <string name="about_active">模块状态</string>
+    <string name="about_active_yes">已激活</string>
+    <string name="about_active_no">未激活</string>
+
+    <string name="contact_body">如有任何问题，请联系开发者反馈。\n\nQQ：349873345</string>
+
+    <string name="crash_title">应用异常</string>
+    <string name="crash_body">很抱歉，本应用运行过程中出现异常。已记录以下错误日志，请复制或导出后，联系开发者反馈，以便尽快修复。</string>
+    <string name="crash_copy">复制日志</string>
+    <string name="crash_export">导出日志</string>
+    <string name="crash_contact">联系 QQ</string>
+    <string name="crash_copied">日志已复制到剪贴板</string>
+    <string name="crash_exported">日志已导出</string>
+    <string name="crash_empty">（无日志）</string>
+    <string name="crash_exit">退出</string>
+    <string name="crash_qq">请通过 QQ（349873345）将日志发送给开发者，以便定位并修复问题。</string>
+
+    <string name="framework_none">未检测到</string>
+    <string name="xposed_description">针对单个应用调整屏幕显示密度与分辨率</string>
+</resources>

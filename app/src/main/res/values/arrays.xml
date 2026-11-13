@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="dpi_method_names">
+        <item>@string/mode_config</item>
+        <item>@string/mode_metrics</item>
+        <item>@string/mode_resources</item>
+        <item>@string/mode_ui</item>
+        <item>@string/mode_combined</item>
+    </string-array>
+
+    <string-array name="dpi_method_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="kill_method_names">
+        <item>@string/kill_force</item>
+        <item>@string/kill_am</item>
+        <item>@string/kill_none</item>
+    </string-array>
+
+    <string-array name="kill_method_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

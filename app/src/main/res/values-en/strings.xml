@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Screen Density Adjuster</string>
+    <string name="app_version">2.0.5</string>
+    <string name="app_owner">AllToolBox</string>
+    <string name="app_author">Appluuicp2233</string>
+    <string name="app_update_date">Nov 9, 2026</string>
+    <string name="app_copyright">AllToolBox Open Source Project (MIT License)</string>
+
+    <string name="agree">Agree</string>
+    <string name="reject">Decline</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="reset">Reset</string>
+    <string name="retry">Re-check</string>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
+    <string name="search">Search</string>
+    <string name="more">More</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+
+    <string name="agreement_body">Welcome to Screen Density Adjuster. Please read the following terms carefully before using the app.\n\n1. Open Source License\nThis application is free open-source software released under the MIT License. You may freely use, copy, modify, merge, publish, distribute, and sublicense copies of the software, provided that the original copyright notice and this license notice are included in all copies. The software is provided \\"as is\\", without any express or implied warranty.\n\n2. Description\nThis app independently configures the display density (DPI) and resolution for individual applications at the system level. The configuration takes effect through the injection mechanism of the Xposed / EdXposed / LSPosed framework. It only affects the target application you select, does not change the overall system display, and does not modify the global system density.\n\n3. Conditions of Use\n1. You must enable this module in the Xposed / EdXposed / LSPosed framework and restart your device for it to take effect.\n2. Some functions (such as adjusting configuration file permissions, terminating the target app process, and obtaining the full app list through the root interface) require root access.\n3. Do not use this app for any purpose that violates laws or regulations or infringes on the rights of others. All consequences arising from the use of this app are borne by the user.\n\n4. Privacy Commitment\nThis app requests no internet permission. It does not collect, upload, or share your personal information. All configurations are stored only in the SharedPreferences on your local device and are cleared when the app is uninstalled.\n\n5. Feedback and Support\nIf you encounter any problems, you can contact the developer through the contact information on the About page.\n\nOwner: AllToolBox\nLicense: MIT License\nUpdated: Nov 9, 2026</string>
+
+    <string name="title_wizard">Wizard</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_about">About</string>
+    <string name="title_contact">Contact</string>
+    <string name="agreement_title">User Agreement</string>
+
+    <string name="wizard_tab_welcome">Welcome</string>
+    <string name="wizard_tab_permission">Permissions</string>
+    <string name="wizard_tab_security">Security</string>
+    <string name="wizard_tab_usage">Usage</string>
+
+    <string name="wizard_welcome_title">Welcome to Screen Density Adjuster</string>
+    <string name="wizard_welcome_body">This is a system-level display adjustment tool for advanced users, running on top of the Xposed / EdXposed / LSPosed framework. It lets you set a separate display density (DPI) and resolution for any app on your device without changing the global system parameters.\n\nUnlike the built-in display scaling, the configuration in this app applies per app independently: you can keep one app at high density and another at low density, without interference. The configuration takes effect when the target app starts, through a system injection mechanism, and remains transparent to the system itself.\n\nPlease read the following three tabs to understand the required permissions, security notes, and the complete usage flow.</string>
+    <string name="wizard_welcome_note">This app must be enabled in the Xposed / EdXposed / LSPosed framework and granted root access to take effect. Please make sure the runtime environment meets these requirements.</string>
+
+    <string name="wizard_permission_title">Permissions</string>
+    <string name="wizard_permission_body">The following prerequisites are required to run this app:\n\n1. Xposed / EdXposed / LSPosed framework: it must be installed, and this module must be enabled in the framework. After enabling the module, restart the device for it to take effect.\n2. Root access: used to make this app\'s configuration file (SharedPreferences) globally readable so the injection module can read the configuration in the target app process, and to terminate the target app process after saving the configuration so the settings take effect immediately.\n3. Query installed apps: used to list the apps on the device in the main screen, so you can choose the target app to configure.\n\nAll permissions are used only locally on this device; this app requests no internet permission.</string>
+    <string name="wizard_permission_note">If any prerequisite is not met, this app cannot work properly. Please enable this module in the framework and restart the device before trying again.</string>
+
+    <string name="wizard_security_title">Security Notes</string>
+    <string name="wizard_security_body">1. This app requests no internet permission and will not upload, collect, or share any data.\n2. This app does not run a background service; it works only when you open it. Its interface process stops after you leave the main screen.\n3. All configurations are saved in the local SharedPreferences; they are cleared when the app is uninstalled, with no leftover system traces.\n4. Root access is used only when you actively perform \\"save and apply configuration\\", to chmod the configuration file and kill the target app process. It is never obtained silently in the background.\n5. When the runtime environment is abnormal (module not activated, no root, etc.), this app does not perform any system-modifying operation and only prompts that the environment is abnormal.\n6. This app is an open-source project (MIT License), so you can review the source code to verify its behavior.</string>
+    <string name="wizard_security_note">Please record the original display density of the target app before making changes, so you can restore it at any time.</string>
+
+    <string name="wizard_usage_title">How to Use</string>
+    <string name="wizard_usage_body">The complete usage flow is as follows:\n\n1. On first launch, choose the injection method (the default \\"Configuration injection\\" is sufficient) and choose the app list retrieval mode (\\"System interface\\" or \\"Root interface\\").\n2. The main screen lists the apps on the device. Tap any app to open its details page.\n3. On the details page, set the DPI value and resolution (width x height) for that app; you can also override the injection method for that app separately.\n4. Tap \\"Save\\" in the top right. The app will terminate the target app process, and the new configuration takes effect the next time you open that app.\n5. If an injection method does not work for a particular app, switch to another method on that app\'s details page (Metrics injection, Resources management, UI injection, or Try all five at once).\n6. Use the top right menu to show or hide system apps, and use the drawer to open Settings or About.</string>
+    <string name="wizard_usage_note">The injection method for a single app can be switched separately on its details page. If the configuration does not take effect, try another mode.</string>
+    <string name="wizard_enter">Enter</string>
+
+    <string name="checking_env">Checking runtime environment</string>
+    <string name="starting_service">Starting system service</string>
+    <string name="service_started">System service started</string>
+    <string name="loading_apps">Loading app list</string>
+    <string name="saving">Saving</string>
+    <string name="saving_apply">Saving and applying</string>
+    <string name="resetting">Restoring default configuration</string>
+
+    <string name="env_banner">Module not activated, tap to close</string>
+    <string name="env_error_body">This app may not work properly.\n\nNo usable runtime environment was detected, or this module has not yet been enabled in the framework.</string>
+    <string name="env_error_root">Root access not detected</string>
+    <string name="env_error_xposed">Xposed framework not detected</string>
+    <string name="env_error_inactive">Module not enabled in the framework</string>
+    <string name="env_solution">Solution: open the framework manager app, enable this app in the module list, then restart the device.</string>
+
+    <string name="select_mode_title">Choose Injection Method</string>
+    <string name="select_mode_body">Configuration injection is used by default. If it does not work for a particular app, try another mode.</string>
+    <string name="mode_config">Configuration injection</string>
+    <string name="mode_metrics">Metrics injection</string>
+    <string name="mode_resources">Resources management</string>
+    <string name="mode_ui">UI injection</string>
+    <string name="mode_combined">Try all five at once</string>
+
+    <string name="select_list_mode_title">App List Retrieval Mode</string>
+    <string name="list_mode_system">System interface</string>
+    <string name="list_mode_system_desc">Retrieve the app list through the system PackageManager (default)</string>
+    <string name="list_mode_root">Root interface</string>
+    <string name="list_mode_root_desc">Retrieve all apps through root commands (including hidden/protected apps)</string>
+
+    <string name="nav_wizard">Wizard</string>
+    <string name="nav_exit">Exit</string>
+    <string name="nav_open">Open navigation</string>
+    <string name="nav_close">Close navigation</string>
+
+    <string name="show_system_apps">Show system apps</string>
+    <string name="show_system_apps_desc">Also show built-in system apps in the list</string>
+    <string name="list_mode">App list retrieval mode</string>
+    <string name="list_mode_desc">Choose how the app list is retrieved</string>
+
+    <string name="language">Language</string>
+    <string name="language_desc">Choose the display language of the app interface</string>
+    <string name="language_system">Follow system</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_en">English</string>
+    <string name="language_ja">日本語</string>
+
+    <string name="unconfigured">Not configured</string>
+    <string name="configured">Configured</string>
+
+    <string name="search_hint">Search by app name or package name</string>
+    <string name="search_empty">No matching apps found</string>
+
+    <string name="dpi_title">DPI Adjustment</string>
+    <string name="dpi_desc">Adjust the display density of this app</string>
+    <string name="dpi_dialog_title">DPI Adjustment</string>
+    <string name="dpi_input_hint">Enter the DPI value</string>
+    <string name="size_title">Resolution</string>
+    <string name="size_desc">Set a separate display resolution for this app</string>
+    <string name="size_dialog_title">Resolution</string>
+    <string name="width_hint">Width</string>
+    <string name="height_hint">Height</string>
+
+    <string name="default_dpi_reference">Default DPI reference</string>
+    <string name="default_dpi_reference_desc">Reference value filled in when a new app is first opened</string>
+    <string name="default_width_reference">Default resolution width reference</string>
+    <string name="default_width_reference_desc">Reference width filled in when a new app is first opened</string>
+    <string name="default_height_reference">Default resolution height reference</string>
+    <string name="default_height_reference_desc">Reference height filled in when a new app is first opened</string>
+    <string name="dpi_method">DPI injection method</string>
+    <string name="dpi_method_desc">Choose how density is injected into the target app</string>
+    <string name="kill_method">Process termination method</string>
+    <string name="kill_method_desc">How the target app process is ended after configuration</string>
+    <string name="kill_force">Force stop</string>
+    <string name="kill_am">Normal stop</string>
+    <string name="kill_none">Do not terminate</string>
+
+    <string name="reset_confirm_title">Restore Default</string>
+    <string name="reset_confirm_body">Reset the inputs to the reference values and clear the saved DPI and resolution for this app?</string>
+    <string name="save_confirm_title">Save Settings</string>
+    <string name="save_confirm_body">Save the DPI and resolution settings for this app? The target app will be restarted after saving to apply them.</string>
+    <string name="reset_done">Default configuration restored</string>
+    <string name="save_done">Saved successfully</string>
+    <string name="save_failed">Save failed. Please check root access</string>
+    <string name="kill_done">Target app process terminated</string>
+    <string name="invalid_dpi">Enter a DPI value between 72 and 960</string>
+    <string name="invalid_range">Please enter a valid value</string>
+    <string name="invalid_size">Please enter valid width and height values</string>
+
+    <string name="about_version">Version</string>
+    <string name="about_author">Author</string>
+    <string name="about_framework">Framework</string>
+    <string name="about_android">Android version</string>
+    <string name="about_owner">Owner</string>
+    <string name="about_update">Updated</string>
+    <string name="about_license">License</string>
+    <string name="about_github">GitHub repository</string>
+    <string name="about_active">Module status</string>
+    <string name="about_active_yes">Activated</string>
+    <string name="about_active_no">Not activated</string>
+
+    <string name="contact_body">For any questions, please contact the developer.\n\nQQ: 349873345</string>
+
+    <string name="crash_title">App Error</string>
+    <string name="crash_body">Sorry, an error occurred while the app was running. The following error log has been recorded. Please copy or export it and send it to the developer so the issue can be fixed as soon as possible.</string>
+    <string name="crash_copy">Copy log</string>
+    <string name="crash_export">Export log</string>
+    <string name="crash_contact">Contact QQ</string>
+    <string name="crash_copied">Log copied to clipboard</string>
+    <string name="crash_exported">Log exported</string>
+    <string name="crash_empty">(No log)</string>
+    <string name="crash_exit">Exit</string>
+    <string name="crash_qq">Please send the log to the developer via QQ (349873345) so the issue can be located and fixed.</string>
+
+    <string name="framework_none">Not detected</string>
+    <string name="xposed_description">Adjust display density and resolution for individual apps</string>
+</resources>

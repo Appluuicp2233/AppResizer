@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">画面密度調整ツール</string>
+    <string name="app_version">2.0.5</string>
+    <string name="app_owner">AllToolBox</string>
+    <string name="app_author">Appluuicp2233</string>
+    <string name="app_update_date">2026 年 11 月 9 日</string>
+    <string name="app_copyright">AllToolBox オープンソースプロジェクト (MIT License)</string>
+
+    <string name="agree">同意</string>
+    <string name="reject">拒否</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">キャンセル</string>
+    <string name="save">保存</string>
+    <string name="reset">リセット</string>
+    <string name="retry">再チェック</string>
+    <string name="close">閉じる</string>
+    <string name="open">開く</string>
+    <string name="search">検索</string>
+    <string name="more">その他</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+
+    <string name="agreement_body">画面密度調整ツールへようこそ。ご利用の前に、以下の条項をよくお読みください。\n\n一、オープンソースライセンス\n本アプリは MIT ライセンスに基づき公開される自由なオープンソースソフトウェアです。原本の著作権表示と本ライセンス表示をすべての複製に含めることを条件に、本ソフトウェアの複製の使用・複製・修正・結合・公開・配布・再ライセンスを自由に行えます。本ソフトウェアは「現状のまま」提供され、明示または黙示の保証を一切行いません。\n\n二、機能説明\n本アプリはシステムレベルで、個々のアプリに対して表示密度（DPI）と解像度を個別に設定します。設定は Xposed / EdXposed / LSPosed フレームワークのインジェクション機構によって反映され、選択した対象アプリにのみ作用し、システム全体の表示には影響せず、システム全体の密度も変更しません。\n\n三、利用条件\n1. Xposed / EdXposed / LSPosed フレームワークで本モジュールを有効にし、端末を再起動する必要があります。\n2. 一部の機能（設定ファイルの権限調整、対象アプリのプロセス終了、root インターフェースによる全アプリリスト取得）には root 権限が必要です。\n3. 法令や他人の権利を侵害する用途で本アプリを使用しないでください。本アプリの使用によって生じた一切の結果は利用者が責任を負います。\n\n四、プライバシーの約束\n本アプリはネットワーク権限を一切申請せず、個人情報を収集・アップロード・共有しません。すべての設定は端末内の SharedPreferences にのみ保存され、アンインストール後には設定も消去されます。\n\n五、フィードバックとサポート\n問題が発生した場合は、「について」ページの連絡先から開発者にご連絡ください。\n\n所属: AllToolBox\nライセンス: MIT License\n更新日: 2026 年 11 月 9 日</string>
+
+    <string name="title_wizard">ガイド</string>
+    <string name="title_settings">設定</string>
+    <string name="title_about">について</string>
+    <string name="title_contact">連絡先</string>
+    <string name="agreement_title">利用規約</string>
+
+    <string name="wizard_tab_welcome">ようこそ</string>
+    <string name="wizard_tab_permission">権限</string>
+    <string name="wizard_tab_security">セキュリティ</string>
+    <string name="wizard_tab_usage">使い方</string>
+
+    <string name="wizard_welcome_title">画面密度調整ツールへようこそ</string>
+    <string name="wizard_welcome_body">本アプリは上級ユーザー向けのシステムレベル表示調整ツールで、Xposed / EdXposed / LSPosed フレームワークの上で動作します。システム全体のパラメータを変更せずに、端末上の任意のアプリに対して個別の表示密度（DPI）と解像度を設定できます。\n\nシステム標準の表示倍率とは異なり、本アプリの設定はアプリごとに独立して反映されます。あるアプリを高密度、別のアプリを低密度のままにするなど、互いに干渉しません。設定はシステムインジェクション機構により対象アプリの起動時に反映され、システム自体には透過的です。\n\n以降の 3 つのタブで、必要な権限、安全上の注意、完全な利用手順をご確認ください。</string>
+    <string name="wizard_welcome_note">本アプリは Xposed / EdXposed / LSPosed フレームワークで有効にし、root 権限を付与して初めて機能します。実行環境が要件を満たしていることをご確認ください。</string>
+
+    <string name="wizard_permission_title">権限説明</string>
+    <string name="wizard_permission_body">本アプリを動作させるには、以下の前提条件が必要です。\n\n1. Xposed / EdXposed / LSPosed フレームワーク: インストール済みで、フレームワーク内で本モジュールを有効にする必要があります。モジュールを有効にした後は、端末を再起動してください。\n2. root 権限: 本アプリの設定ファイル（SharedPreferences）を全体読み取り可能にし、インジェクションモジュールが対象アプリのプロセスで設定を読めるようにします。また、設定保存後に対象アプリのプロセスを終了させ、設定を即時反映させるために使用します。\n3. インストール済みアプリの照会: メイン画面に端末上のアプリを一覧表示し、設定する対象アプリを選ぶために使用します。\n\nすべての権限はこの端末内でのみ使用され、本アプリはネットワーク権限を申請しません。</string>
+    <string name="wizard_permission_note">いずれかの前提条件を満たさない場合、本アプリは正常に動作できません。フレームワークで本モジュールを有効にし、端末を再起動してから再度お試しください。</string>
+
+    <string name="wizard_security_title">安全上の注意</string>
+    <string name="wizard_security_body">1. 本アプリはネットワーク権限を一切申請せず、データをアップロード・収集・共有しません。\n2. 本アプリは常駐バックグラウンドサービスを持たず、開かれたときだけ動作します。メイン画面を離れると本アプリのインターフェースプロセスは停止します。\n3. すべての設定は端末内の SharedPreferences に保存され、アンインストール後は消去され、システムに痕跡を残しません。\n4. root 権限は「設定を保存して反映」を実行したときのみ使用し、設定ファイルの chmod と対象アプリのプロセス kill を行います。バックグラウンドで静かに取得することはありません。\n5. 実行環境に異常が検出された場合（モジュール未有効、root なしなど）、本アプリはシステムを変更する操作を一切行わず、環境異常の通知のみを表示します。\n6. 本アプリはオープンソースプロジェクト（MIT License）です。ソースコードを確認して動作を検証できます。</string>
+    <string name="wizard_security_note">変更前に対象アプリの元の表示密度を記録しておき、いつでも復元できるようにしてください。</string>
+
+    <string name="wizard_usage_title">使い方</string>
+    <string name="wizard_usage_body">完全な利用手順は次のとおりです。\n\n1. 初回起動時、インジェクション方式（既定は「設定インジェクション」で十分です）を選び、アプリリスト取得モード（「システムインターフェース」または「root インターフェース」）を選びます。\n2. メイン画面に端末上のアプリが一覧表示されます。任意のアプリをタップして詳細ページを開きます。\n3. 詳細ページでそのアプリの DPI 値と解像度（幅 × 高さ）を設定し、必要に応じてそのアプリ専用のインジェクション方式を上書きできます。\n4. 右上の「保存」をタップします。本アプリが対象アプリのプロセスを終了させ、次回そのアプリを開いたときに新しい設定が反映されます。\n5. あるアプリでインジェクション方式が効かない場合は、そのアプリの詳細ページで他の方式（メトリクス注入、リソース管理、UI 注入、または 5 つを同時に試行）に切り替えてください。\n6. 右上メニューでシステムアプリの表示・非表示を切り替え、ドロワーから設定または「について」を開けます。</string>
+    <string name="wizard_usage_note">個々のアプリのインジェクション方式は詳細ページで個別に切り替えられます。設定が反映されない場合は他のモードをお試しください。</string>
+    <string name="wizard_enter">入る</string>
+
+    <string name="checking_env">実行環境を確認しています</string>
+    <string name="starting_service">システムサービスを起動しています</string>
+    <string name="service_started">システムサービスを起動しました</string>
+    <string name="loading_apps">アプリリストを読み込んでいます</string>
+    <string name="saving">保存中</string>
+    <string name="saving_apply">保存して反映しています</string>
+    <string name="resetting">既定の設定に戻しています</string>
+
+    <string name="env_banner">モジュールが有効でありません。タップして閉じる</string>
+    <string name="env_error_body">本アプリは正常に動作しない可能性があります。\n\n利用可能な実行環境が検出されないか、本モジュールがフレームワークでまだ有効にされていません。</string>
+    <string name="env_error_root">root 権限が検出されません</string>
+    <string name="env_error_xposed">Xposed フレームワークが検出されません</string>
+    <string name="env_error_inactive">モジュールがフレームワークで有効にされていません</string>
+    <string name="env_solution">対処: フレームワーク管理アプリを開き、モジュール一覧で本アプリを有効にしてから端末を再起動してください。</string>
+
+    <string name="select_mode_title">インジェクション方式を選択</string>
+    <string name="select_mode_body">既定は設定インジェクションです。あるアプリで効かない場合は他のモードをお試しください。</string>
+    <string name="mode_config">設定インジェクション</string>
+    <string name="mode_metrics">メトリクス注入</string>
+    <string name="mode_resources">リソース管理</string>
+    <string name="mode_ui">UI 注入</string>
+    <string name="mode_combined">5 つを同時に試行</string>
+
+    <string name="select_list_mode_title">アプリリスト取得モード</string>
+    <string name="list_mode_system">システムインターフェース</string>
+    <string name="list_mode_system_desc">システムの PackageManager からアプリリストを取得（既定）</string>
+    <string name="list_mode_root">root インターフェース</string>
+    <string name="list_mode_root_desc">root コマンドで全アプリを取得（非表示/保護アプリを含む）</string>
+
+    <string name="nav_wizard">ガイド</string>
+    <string name="nav_exit">終了</string>
+    <string name="nav_open">ナビゲーションを開く</string>
+    <string name="nav_close">ナビゲーションを閉じる</string>
+
+    <string name="show_system_apps">システムアプリを表示</string>
+    <string name="show_system_apps_desc">一覧にシステム標準アプリも表示します</string>
+    <string name="list_mode">アプリリスト取得モード</string>
+    <string name="list_mode_desc">アプリリストを取得する方式を選択します</string>
+
+    <string name="language">言語</string>
+    <string name="language_desc">アプリ画面の表示言語を選択します</string>
+    <string name="language_system">システムに従う</string>
+    <string name="language_zh">简体中文</string>
+    <string name="language_en">English</string>
+    <string name="language_ja">日本語</string>
+
+    <string name="unconfigured">未設定</string>
+    <string name="configured">設定済み</string>
+
+    <string name="search_hint">アプリ名またはパッケージ名で検索</string>
+    <string name="search_empty">一致するアプリが見つかりません</string>
+
+    <string name="dpi_title">DPI 調整</string>
+    <string name="dpi_desc">このアプリの表示密度を調整します</string>
+    <string name="dpi_dialog_title">DPI 調整</string>
+    <string name="dpi_input_hint">DPI 値を入力してください</string>
+    <string name="size_title">解像度設定</string>
+    <string name="size_desc">このアプリの表示解像度を個別に設定します</string>
+    <string name="size_dialog_title">解像度設定</string>
+    <string name="width_hint">幅</string>
+    <string name="height_hint">高さ</string>
+
+    <string name="default_dpi_reference">既定 DPI 参考値</string>
+    <string name="default_dpi_reference_desc">新しいアプリを初めて開いたときに入力される参考値</string>
+    <string name="default_width_reference">既定解像度 幅 参考値</string>
+    <string name="default_width_reference_desc">新しいアプリを初めて開いたときに入力される参考幅</string>
+    <string name="default_height_reference">既定解像度 高さ 参考値</string>
+    <string name="default_height_reference_desc">新しいアプリを初めて開いたときに入力される参考高さ</string>
+    <string name="dpi_method">DPI 注入方式</string>
+    <string name="dpi_method_desc">対象アプリへ密度を注入する方式を選択します</string>
+    <string name="kill_method">プロセス終了方式</string>
+    <string name="kill_method_desc">設定後に対象アプリのプロセスを終了する方法</string>
+    <string name="kill_force">強制停止</string>
+    <string name="kill_am">通常停止</string>
+    <string name="kill_none">終了しない</string>
+
+    <string name="reset_confirm_title">既定に戻す</string>
+    <string name="reset_confirm_body">入力を参考値にリセットし、このアプリに保存された DPI と解像度を消去しますか？</string>
+    <string name="save_confirm_title">設定を保存</string>
+    <string name="save_confirm_body">このアプリの DPI と解像度の設定を保存しますか？保存後、対象アプリを再起動して反映します。</string>
+    <string name="reset_done">既定の設定に戻しました</string>
+    <string name="save_done">保存しました</string>
+    <string name="save_failed">保存に失敗しました。root 権限を確認してください</string>
+    <string name="kill_done">対象アプリのプロセスを終了しました</string>
+    <string name="invalid_dpi">DPI は 72 ～ 960 の間で入力してください</string>
+    <string name="invalid_range">有効な値を入力してください</string>
+    <string name="invalid_size">有効な幅と高さの値を入力してください</string>
+
+    <string name="about_version">バージョン</string>
+    <string name="about_author">作者</string>
+    <string name="about_framework">フレームワーク</string>
+    <string name="about_android">Android バージョン</string>
+    <string name="about_owner">所属</string>
+    <string name="about_update">更新日</string>
+    <string name="about_license">ライセンス</string>
+    <string name="about_github">GitHub リポジトリ</string>
+    <string name="about_active">モジュール状態</string>
+    <string name="about_active_yes">有効</string>
+    <string name="about_active_no">無効</string>
+
+    <string name="contact_body">ご質問があれば開発者にご連絡ください。\n\nQQ: 349873345</string>
+
+    <string name="crash_title">アプリのエラー</string>
+    <string name="crash_body">申し訳ありません。アプリの実行中にエラーが発生しました。以下のエラーログを記録しました。コピーまたはエクスポートして開発者にお送りください。できるだけ早く修正します。</string>
+    <string name="crash_copy">ログをコピー</string>
+    <string name="crash_export">ログをエクスポート</string>
+    <string name="crash_contact">QQ で連絡</string>
+    <string name="crash_copied">ログをクリップボードにコピーしました</string>
+    <string name="crash_exported">ログをエクスポートしました</string>
+    <string name="crash_empty">（ログなし）</string>
+    <string name="crash_exit">終了</string>
+    <string name="crash_qq">問題の特定と修正のため、QQ（349873345）からログを開発者にお送りください。</string>
+
+    <string name="framework_none">検出されません</string>
+    <string name="xposed_description">個々のアプリの表示密度と解像度を調整します</string>
+</resources>
