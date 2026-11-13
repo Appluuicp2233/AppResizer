@@ -2,6 +2,8 @@
 
 [中文](README.md) · [English](README.en.md) · [日本語](README.ja.md)
 
+> Notice: Part of this project was completed by AI. The introduction and changelog may contain errors, please verify carefully. The application was also developed with AI assistance.
+
 > A system-level display adjustment tool running on the Xposed / EdXposed / LSPosed framework. It sets the display density (DPI) and resolution **independently for each app** without changing the global system parameters.
 
 | Item | Value |
