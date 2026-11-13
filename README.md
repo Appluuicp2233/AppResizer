@@ -180,4 +180,4 @@ chmod 644 <dataDir>/shared_prefs/appresizer_config.xml
 
 ## 九、许可
 
-本项目基于 **MIT License** 开源，详见 [LICENSE](LICENSE)。版本改动记录见 [CHANGELOG.md](CHANGELOG.md)。
+本项目基于 **MIT License** 开源，详见 [LICENSE](LICENSE)。
