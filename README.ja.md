@@ -180,4 +180,4 @@ chmod 644 <dataDir>/shared_prefs/appresizer_config.xml
 
 ## 9. ライセンス
 
-本プロジェクトは **MIT License** で公開されています。詳細は [LICENSE](LICENSE) を参照してください。変更履歴は [CHANGELOG.md](CHANGELOG.md) を参照してください。
+本プロジェクトは **MIT License** で公開されています。詳細は [LICENSE](LICENSE) を
